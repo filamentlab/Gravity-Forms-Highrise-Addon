@@ -358,7 +358,7 @@ class HighriseAPI{
 
 		//Parse XML
 		$people = @simplexml_load_string($xml);
-		$this->person = null;
+		$this->person = new stdClass();
 		$this->person->id = '-1';
 		foreach ($people->person as $person ) {
 			if($person != null) {
